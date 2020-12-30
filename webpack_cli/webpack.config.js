@@ -11,7 +11,7 @@ module.exports = {
     entry: './src/index.js', /// 文件入口
     output: {
         filename: '[name].bundle.js', /// 输出文件名
-        path: path.resolve(__dirname, 'dist') /// 输出路劲
+        path: path.resolve(__dirname, 'dist') /// 输出路径
     },
     optimization: {
         /// 代码分离
