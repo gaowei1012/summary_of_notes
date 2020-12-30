@@ -1,3 +1,4 @@
 {
-  "main.js": "automain.bundle.js"
+  "main.js": "automain.bundle.js",
+  "runtime.js": "autoruntime.bundle.js"
 }

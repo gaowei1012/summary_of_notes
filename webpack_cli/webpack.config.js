@@ -13,6 +13,10 @@ module.exports = {
         filename: '[name].bundle.js', /// 输出文件名
         path: path.resolve(__dirname, 'dist') /// 输出路劲
     },
+    optimization: {
+        /// 代码分离
+        runtimeChunk: 'single',
+    },
     plugins: [
         new HtmlWebpackPlugin({
             template: path.resolve(__dirname, 'index.html'),
