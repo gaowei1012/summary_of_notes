@@ -8,7 +8,7 @@ const options = require('./options')
 module.exports = {
     mode: 'development', /// 指定webpack编译模式
     devtool: 'inline-source-map', /// 指定是以哪种模式编译代码
-    entry: './src/index.js', /// 文件入口
+    entry: './index.js', /// 文件入口
     output: {
         filename: '[name].bundle.js', /// 输出文件名
         path: path.resolve(__dirname, 'dist') /// 输出路径
