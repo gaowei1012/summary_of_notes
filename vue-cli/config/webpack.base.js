@@ -1,3 +1,4 @@
+const chalk = require('chalk')
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const VueLoaderPlugin = require('vue-loader/lib/plugin')
@@ -55,6 +56,9 @@ module.exports = {
             template: './src/index.html'
         }),
         new VueLoaderPlugin(),
-        new ProgressBarPlugin()
+        new ProgressBarPlugin({
+            format: '  build [:bar] ' + chalk.green.bold(':percent') + ' (:elapsed seconds)',
+            clear: false
+        })
     ]
 }
