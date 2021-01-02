@@ -13,9 +13,12 @@ module.exports = {
   },
   resolve: {
     extensions: [".js", ".jsx", ".scss", ".css"], //后缀名自动补全
+    modules: [path.resolve(__dirname, '../node_modules')],
     alias: {
+      react: path.resolve(__dirname, '../node_modules/react/umd/react.production.min.js'),
+      'react-dom': path.resolve(__dirname, '../node_modules/react-dom/umd/react-dom.production.min.js'),
       "@": path.resolve(__dirname, "../src"),
-    },
+    }
   },
   module: {
     rules: [
@@ -23,17 +26,18 @@ module.exports = {
         test: /\.(css|s[ac]ss)$/,
         use: ["style-loader", "css-loader", "sass-loader"],
       },
-      // {
-      //   test: /\.s[ac]ss$/,
-      //   use: ["style-loader", "css-loader", "sass-loader"],
-      // },
       {
         test: /\.(png|svg|jpg|gif)$/,
         use: "url-loader",
       },
       {
-        test: /\.js$/,
-        loader: "babel-loader",
+        test: /\.js|jsx$/, /// 支持 .js && .jsx 语法
+        use: {
+          loader: "babel-loader",
+          options: {
+            presets:['@babel/preset-env']
+          }
+        },
         exclude: /node_modules/
       }
     ],
@@ -49,9 +53,6 @@ module.exports = {
         chalk.green.bold(":percent") +
         " (:elapsed seconds)",
       clear: false,
-    }),
-    // new MiniCssExtractPlugin({
-    //     insert: '#some-element'
-    // })
+    })
   ],
 };

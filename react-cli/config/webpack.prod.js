@@ -1,9 +1,10 @@
 const merge = require("webpack-merge");
 const base = require("./webpack.base.js");
 const CleanWebpackPlugin = require('clean-webpack-plugin');
-const {WebpackManifestPlugin} = require('webpack-manifest-plugin')
+const OptimizeCssAssetsWebpackPlugin = require('optimize-css-assets-webpack-plugin');
 const path = require("path");
-const options = require('./options')
+const glob = require('glob-all')
+const purifyCssWebpack = require('purifycss-webpack')
 
 module.exports = merge(base, {
 	mode: 'production',
@@ -11,8 +12,19 @@ module.exports = merge(base, {
 		new CleanWebpackPlugin(['dist'], {
 			root: path.resolve(__dirname, '../'),
 		}),
-		/// 生成 manifest.json 文件，用于后面的 DllPlugin 代码拆分
-		new WebpackManifestPlugin(options)
+		new OptimizeCssAssetsWebpackPlugin({
+			cssProcessor: require('cssnano'),
+            cssProcessorPluginOptions: {
+                // 去掉注释
+                preset: ["default", { discardComments: { removeAll: true } }]
+            },
+		}),
+		new purifyCssWebpack({
+            paths: glob.sync([
+                path.resolve(__dirname, '../src/*html'),
+                path.resolve(__dirname, '../src/*js')
+            ])
+        }),
 	],
 	optimization: {
 		runtimeChunk: 'single',
