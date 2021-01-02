@@ -1,6 +1,6 @@
 <template>
   <div class="app">
-    <p>{{name}}</p>
+    <p>{{ name }}</p>
     <a-button>按钮</a-button>
   </div>
 </template>
@@ -10,8 +10,8 @@ export default {
   name: "app",
   data() {
     return {
-        collapsed: false,
-        name: "hello world ---> [😓]",
+      collapsed: false,
+      name: "hello world ---> [😓]",
     };
   },
 };
