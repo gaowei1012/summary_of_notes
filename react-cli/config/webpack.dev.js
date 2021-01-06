@@ -9,7 +9,7 @@ module.exports = merge(base, {
   devtool: "source-map",
   devServer: {
     compress: true, //启用压缩
-    port: 1207, //端口
+    port: 1230, //端口
     open: false, //自动打开浏览器
     hot: true,
     clientLogLevel: 'info',
