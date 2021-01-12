@@ -44,9 +44,9 @@ function demo() {
   array[0] = "sd";
   array[1] = "bd";
   array[2] = "cd";
-  console.log("sort==>", array.sort()); // ["bd", "cd", "sd"] 
+  console.log("sort==>", array.sort()); // ["bd", "cd", "sd"]
 }
-demo();
+// demo();
 
 /**
  * 对于数组的常用方法整理比较详细，每一个案例都会有自己详细的注释，
@@ -56,6 +56,23 @@ demo();
  *  arr.indexOf(4) // -1
  *  没返回值的时候会返回-1
  *  有匹配会返回值 0
- * 
+ *
  *  ****再接再厉*****
  */
+
+/**
+ * object.keys(obj): 获取对象的所有key,obj为自己定义的对象名
+ * object.values(obj): 获取对象的所有value,obj为自己定义的对象名
+ * object.entries(obj): 获取对象的所有key和所有value,obj为自己定义的对象名
+ * obj.hasOwnProperty(str): 判断对象是否包含某个key
+ */
+function demo1() {
+  const obj = {
+    name: "龚铱白",
+    age: 12,
+    sex: "女",
+  };
+  console.log("entries==>", Object.entries(obj));
+  console.log("hasOwnProperty==>", obj.hasOwnProperty(12));
+}
+demo1();
