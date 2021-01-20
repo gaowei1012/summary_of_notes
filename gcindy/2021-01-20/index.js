@@ -2,7 +2,7 @@
  * @Author: 一个为高薪头秃的程序媴
  * @Date: 2021-01-20 14:30:56
  * @LastEditors: 一个为高薪头秃的程序猿
- * @LastEditTime: 2021-01-20 14:47:10
+ * @LastEditTime: 2021-01-20 15:02:36
  */
 
 /**
@@ -23,7 +23,7 @@ function demo() {
 }
 demo();
 /**
- * Object.defineProperty(添加属性的参数,属性名,{value:属性值})
+ * Object.defineProperty(添加属性的参数,属性名,{value:属性值}) ==> 向对象添加属性
  */
 function demo1() {
   const obj = {
@@ -35,3 +35,13 @@ function demo1() {
   console.log("obj==>", obj, obj.test);
 }
 demo1();
+/**
+ * apply ==> 合并数组
+ */
+function demo2() {
+  const number = [1, 2, 3, 4];
+  const number1 = [5, 6, 7, 8];
+  number.push.apply(number, number1);
+  console.log(number);
+}
+demo2();
