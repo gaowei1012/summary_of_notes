@@ -4,8 +4,8 @@
  * @LastEditors: 一个为高薪头秃的程序猿
  * @LastEditTime: 2021-01-19 10:41:29
  * @Description: 小练习
- * @Comments:
- * @Excitation:
+ * @Comments: 多写业务，加深基础的巩固
+ * @Excitation: 可以在案例上写你这断代码的思路，可以以注释的形式展现出来，这样可以表明你对代码的理解程度（具体思路更重要）
  */
 
 const data = [

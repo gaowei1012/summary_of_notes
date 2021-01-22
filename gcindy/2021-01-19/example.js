@@ -4,8 +4,8 @@
  * @LastEditors: 一个为高薪头秃的程序猿
  * @LastEditTime: 2021-01-19 21:45:38
  * @Description: 栗子🌰
- * @Comments: 
- * @Excitation: 
+ * @Comments: 这个例子比较深，难度比较大，可以理解、很OK
+ * @Excitation:  
  */
 function Student(props) {
   this.name = props.name || "Unnamed";
