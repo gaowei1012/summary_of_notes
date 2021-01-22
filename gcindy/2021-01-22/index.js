@@ -2,7 +2,7 @@
  * @Author: 一个为高薪头秃的程序媴
  * @Date: 2021-01-22 14:36:16
  * @LastEditors: 一个为高薪头秃的程序猿
- * @LastEditTime: 2021-01-22 14:54:22
+ * @LastEditTime: 2021-01-22 15:49:08
  * @Description: 每日一题
  * @Comments:
  * @Excitation:
@@ -24,4 +24,49 @@ function demo() {
   }
 }
 demo();
-function demo1() {}
+
+function demo1() {
+  var a = [0]; // 普通我们定义一个构造函数
+  // function A(x, y) {
+  //   this.x = x;
+  //   this.y = y;
+  // }
+  // // 借助原型，来一版
+  // A.prototype.hello = function () {
+  //   return "(" + this.x + "," + this.y + ")"; // 这时候的this指向的是A
+  // };
+
+  // let ademo = new A(1, 2);
+  // console.log("a==>", ademo);
+
+  class A {
+    constructor(x, y) {
+      // 这里的this还是指向A
+      this.x = x;
+      this.y = y;
+    }
+    hello() {
+      return "(" + this.x + "," + this.y + ")";
+    }
+  }
+  console.log(
+    "判断A是否为function并指向构造函数==>",
+    A === A.prototype.constructor
+  );
+  // 实例化A
+  let ademo = new A(1, 2);
+  console.log(ademo);
+
+  class B {
+    constructor(str) {
+      this.str = str;
+    }
+
+    /**
+     * window下的this 指向全局
+     * B中的this 指向B
+     */
+
+  }
+}
+demo1();
