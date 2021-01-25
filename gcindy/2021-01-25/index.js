@@ -2,7 +2,7 @@
  * @Author: 一个为高薪头秃的程序媴
  * @Date: 2021-01-25 09:36:34
  * @LastEditors: 一个为高薪头秃的程序猿
- * @LastEditTime: 2021-01-25 11:11:06
+ * @LastEditTime: 2021-01-25 17:34:46
  * @Description: Promise的原理
  * 1、Promise 基本使用，写出一个 Demo， 用代码展示 Promise 的具体用法，为什么要用 Promise， 有什么好处？
  * 2、Promise 中内部有几个状态，分别是什么，用什么作用？
@@ -16,7 +16,7 @@
 
 /**
  * Promise 基本使用，写出一个 Demo， 用代码展示 Promise 的具体用法，为什么要用 Promise， 有什么好处？
- * Promise为异步函数，它可以完美的处理异步数据
+ * ! Promise为异步函数，它可以完美的处理异步数据，主要为了解决地狱回调、对错误的拦截等
  */
 function demo() {
   const air = "天空";
