@@ -39,6 +39,21 @@ function demo() {
 }
 demo();
 
+// 函数回调地狱
+function A() {
+  function B() {
+    function C() {
+      function D() {
+        function E() {
+          // TODO
+        }
+      }
+    }
+  }
+}
+
+// 使用 Promise
+new Promise().then().then().then().then()
 /**
  * 什么是 Promise/A+ 标准，请详述？
  * 1、有返回值（成功/失败）
