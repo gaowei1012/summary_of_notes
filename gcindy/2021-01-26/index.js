@@ -4,8 +4,8 @@
  * @LastEditors: 一个为高薪头秃的程序猿
  * @LastEditTime: 2021-01-26 11:01:20
  * @Description: 了解async以及Generator函数
- * @Comments:
- * @Excitation:
+ * @Comments: 案例表达明确，可以突出对知识点的理解，保持这样的做法，再接再厉
+ * @Excitation: 今天的案例对知识点陈述很明确，在实际应用中可以使用这种方式处理异步逻辑
  */
 
 /**

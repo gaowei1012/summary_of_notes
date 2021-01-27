@@ -4,8 +4,8 @@
  * @LastEditors: 一个为高薪头秃的程序猿
  * @LastEditTime: 2021-01-27 10:24:42
  * @Description: 了解Set以及Map
- * @Comments:
- * @Excitation:
+ * @Comments: 这里是ES6新增的 Set 集合方法，在实际业务中会用到去重
+ * @Excitation: 这里的可以在实际业务中是使用，比如说之前的使用 for 去重，现在可以使用 Set 去重，再接再厉
  */
 
 function setDemo() {
@@ -21,10 +21,15 @@ function setDemo() {
   const temp = new Set([1, 2, 4, 5, 6, 1, 3, 4]);
   const arr = [...temp]; // 1,2,4,5,6,3
   console.log("arr==>", arr);
-  // ?过滤
+  /**
+   * 1、首先 set 时候会对数组去重
+   * 2、对数组中的每一成员 乘 2
+   * 输出：{4, 6, 8}
+   */
   const set = new Set([2, 3, 4]);
-  set = new Set([...set].map((i) => x * 2));
+  set = new Set([...set].map((i) => i * 2));
   console.log("set==>", set);
+  // se ===>  {4, 6, 8}
 
   // const mp = new Map(["name", "age"], ["张三", 12]);
   /**
